@@ -8,43 +8,69 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Define Layers for numbers to make it easier
+#define COLEDH 0
+#define LO_NUM 1
+#define RS_PAD 2
+#define AD_FUN 3
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace [from technikable]
+&lt { quick_tap_ms = <200>; };
+
+// Some more technikable goodies
+#define BT(n) BT_SEL n
+
 / {
+        behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "homerow mods";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <200>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+        };
+    
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        label = "Colemak DH";
 // -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
+// |  Q  |  W  |  F  |  P  |  B   |    |  J  |  L  |  U  |  Y  |  ;  |
+// |  A  |  R  |  S  |  T  |  G   |    |  M  |  N  |  E  |  I  |  O  |
+// |  Z  |  X  |  C  |  D  |  V   |    |  K  |  H  |  ,  |  .  |  /  |
+//          | NONE | GUI_' | L_BKSP || R_SPC | TAB | NONE |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-          &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
+        &kp Q           &kp W           &kp F           &kp P   &kp B           &kp J   &kp L  &kp U            &kp Y          &kp SEMI
+        &mt RS_PAD A    &kp R           &kp S           &kp T   &kp G           &kp M   &kp N  &kp E            &kp I          &kp O
+        &hm LSHFT Z     &hm LCTRL X     &hm LALT C      &kp D   &kp V           &kp K   &kp H  &hm RALT COMMA   &hm RCTRL DOT  &hm RSHFT FSLH
+                        &none           &hm LGUI QUOT   &hm LO_NUM BSPC         &hm RS_PAD SPACE   &kp TAB      &none
                         >;
                 };
-                nav_layer {
+                numsym_layer {
+                        label = "numbers & symbols";
 // -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
+// |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
+// |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
+// |     |  \  |  `  |  '  |  /?  |    | -_  | =+  | [{  |  }] |     |
+//             |     |      |      || A_ENT  |      |      |
                         bindings = <
-   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
+        &kp EXCL        &kp AT  &kp HASH        &kp DLLR        &kp PRCNT               &kp CARET  &kp AMPS &kp KP_M   &kp LPAR   &kp RPAR
+   &kp &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
    &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
                             &trans   &trans    &trans     &trans   &trans   &trans
                         >;
                 };
 
-                sym_layer {
+                navpad_layer {
+                        label = "navigation & numpad";
 // -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+// | ESC | PGU |  UP | HOM | MUTE|    | KP- | KP7 | KP8 | KP9 |BKSP |
+// | TAB | LFT | DWN | RGT |VOLUP|    | KP* | KP4 | KP5 | KP6 |KPPLS|
+// |     | PGD |     | END |VOLDN|    | KP/ | KP1 | KP2 | KP3 |KPENT|
+//             | NONE |     | DEL ||TRNS | KP0 | NONE |
                         bindings = <
    &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
    &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
@@ -55,11 +81,12 @@
 
 // This layer is unreachable until "tri layer state" is sorted out.
 // Leaving it here for completeness.
-                num_layer {
+                function_layer {
+                        label = "F-keys & other"
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
+// |     |     |     |     |     |   |     |     |     |     |     |
+// |  <  |  {  |  [  |  (  | F11 |   | F12 |  )  |  ]  |  }  |  >  |
+// | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
    &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
