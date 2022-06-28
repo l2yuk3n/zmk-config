@@ -49,7 +49,7 @@
 
         nav_pad {
             bindings = <
-    &kp ESC        &bt PG_UP      &bt UP         &kp HOME       &C_VOL_UP      &C_BRI_UP      &kp HOME       &kp UP         &PG_UP         &none
+    &kp ESC        &bt PG_UP      &bt UP         &kp HOME       &C_VOL_UP      &C_BRI_UP      &kp HOME       &kp UP         &kp PG_UP      &none
     &trans         &kp LEFT       &kp DOWN       &kp RIGHT      &C_MUTE        &none          &kp LEFT       &kp DOWN       &kp RIGHT      &none
     &none          &kp PG_DN      &none          &kp END        &C_VOL_DN      &C_BRI_DN      &kp END        &none          &PG_DN
     &trans         &none          &trans         &lt ADJ_FUN DEL               &trans                        &trans         &none          &trans
