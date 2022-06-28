@@ -62,6 +62,7 @@
     &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &kp KP_ASTERISK &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp KP_PLUS
     &kp F11        &kp F12        &none          &none          &none         &kp KP_SLASH    &kp KP_N1      &kp KP_N2      &kp KP_N3
     &reset         &none          &bootloader    &trans                       &trans                         &kp KP_N0      &none          &kp KP_ENT
+            >;
         };
     };
 };
