@@ -35,7 +35,7 @@
     &kp Q          &kp W          &kp E          &kp R          &kp T          &kp Y          &kp U          &kp I          &kp O          &kp P
     &lt NAV_PAD A  &kp S          &kp D          &kp F          &kp G          &kp H          &kp J          &kp K          &kp L          &lt NUM_SYM SEMI 
     &hm LSHFT Z    &kp X          &hm LALT C     &kp V          &kp B          &kp N          &kp M          &hm RALT COMMA &hm RCTRL DOT
-    &kp LCTRL      &none          &hm LGUI SQT   &lt NUM_SYM BSPC              &lt NAV_PAD SPACE             &hm LALT TAB   jjjjjjjjjjj&none          &hm RSHFT FSLH
+    &kp LCTRL      &none          &hm LGUI SQT   &lt NUM_SYM BSPC              &lt NAV_PAD SPACE             &hm LALT TAB   &none          &hm RSHFT FSLH
             >;
         };
         num_sym {
