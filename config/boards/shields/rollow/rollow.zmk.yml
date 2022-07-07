@@ -1,0 +1,14 @@
+file_format: "1"
+id: rollow
+name: JHL-rollow
+type: shield
+url: https://www.barbellboards.com/product/rollow
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - rollow_left
+  - rollow_right
