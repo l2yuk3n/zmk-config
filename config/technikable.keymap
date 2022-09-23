@@ -1,0 +1,140 @@
+/*
+ * Copyright (c) 2022 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+// #define QWERTY_BASE  true
+
+// #define TBLE_ORTHO   true
+// #define TBLE_MIT     true
+#define TBLE_DUAL_2U    true
+
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+#define SPEC 4
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+
+#define BT(n) BT_SEL n
+
+/ {
+    chosen {
+       zmk,matrix_transform =
+#ifdef TBLE_DUAL_2U
+                       &dual_2u_transform;
+#elif defined(TBLE_MIT)
+                       &mit_transform;
+#else
+                       &ortho_transform;
+#endif
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+	tri_layer {
+	    if-layers = <NAV_L NUM_L>;
+	    then-layer = <SYM_L>;
+	};
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default {
+            label = "default";
+            bindings = <
+#ifdef QWERTY_BASE
+    &kp Q          &kp W          &kp E          &kp R          &kp T          &kp ESC        &kp ESC        &kp Y          &kp U          &kp I          &kp O          &lt LWR P         
+    &lt RSE A      &kp S          &kp D          &kp F          &kp G          &none          &none          &kp H          &kp J          &kp K          &kp L          &kp SEMI      
+    &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp V          &kp B          &none          &none          &kp N          &kp M          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
+#else
+    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp ESC        &kp ESC        &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &lt RSE A      &kp R          &kp S          &kp T          &kp G          &none          &none          &kp M          &kp N          &kp E          &kp I          &kp O
+    &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &none          &none          &kp K          &kp H          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
+#endif
+#ifdef TBLE_DUAL_2U
+                                  &kp LCTRL      &hm LGUI QUOT         &lt LWR BSPC                  &lt RSE SPACE          &kp TAB       &kp RCTRL
+#elif defined(TBLE_MIT)
+                       &kp LCTRL  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp RALT    &kp RCTRL
+#else
+                       &kp LCTRL  &kp LALT    &mo NAV_L      &kp SPACE      &kp SPACE        &mo NUM_L      &kp RALT    &kp RCTRL
+#endif
+            >;
+        };
+
+        lower {
+            label = "numbers&symbols";
+            bindings = <
+    &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT      &kp ESC        &kp ESC        &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
+    &kp N1         &kp N2         &kp N3         &kp N4         &kp N5         &none          &none          &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
+    &kp LSHFT      &kp BSLH       &kp GRAVE      &kp SQT        &kp FSLH       &none          &none          &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &kp RSHFT
+#ifdef TBLE_DUAL_2U
+                                  &kp LCTRL      &trans                &trans                        &lt ADJ RET            &kp RALT       &kp RCTRL
+#elif defined(TBLE_MIT)
+                      &trans     &trans      &trans                &trans             &trans      &trans   &trans
+#else
+                      &trans     &trans      &trans          &trans       &trans    &trans  &trans         &trans
+#endif
+            >;
+        };
+
+        raise {
+            label = "navigation&numpad";
+            bindings = <
+    &kp ESC        &kp PG_UP      &kp UP         &kp HOME       &kp C_MUTE    &kp ESC         &kp ESC        &kp KP_MINUS    &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp BSPC
+    &trans         &kp LEFT       &kp DOWN       &kp RIGHT      &kp KP_NUM    &none           &none          &kp KP_ASTERISK &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp KP_PLUS
+    &kp LSHFT      &kp PG_DN      &none          &kp END        &trans        &none           &none          &kp KP_DIVIDE   &kp KP_N1      &kp KP_N2      &kp KP_N3      &kp KP_ENTER
+#ifdef TBLE_DUAL_2U
+                                  &kp LCTRL      &trans                &lt ADJ DEL                   &trans                  &kp KP_N0      &kp KP_DOT
+#elif defined(TBLE_MIT)
+                     &trans     &kp N0      &kp MINUS           &none            &kp ESC        &kp DEL      &trans
+#else
+                     &trans     &kp N0      &kp MINUS    &none         &none     &kp ESC        &kp DEL      &trans
+#endif
+            >;
+        };
+
+        adjust {
+            label = "functions&BT";
+            bindings = <
+    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE   &none          &none          &out OUT_USB   &bt BT(4)      &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
+    &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11        &none          &none          &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
+    &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &none          &none          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+#ifdef TBLE_DUAL_2U
+                                  &trans         &trans                &trans                        &trans                 &trans         &trans
+#elif defined(TBLE_MIT)
+                      &trans     &kp LS(N0)      &trans                &trans             &trans      &trans   &trans
+#else
+                      &trans     &kp LS(N0)      &trans          &trans       &trans    &trans  &trans         &trans
+#endif
+            >;
+        };
+
+        special {
+            label = "SPECIAL";
+            bindings = <
+    &bootloader    &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &bootloader
+    &reset         &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &reset
+    &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &none
+#ifdef TBLE_DUAL_2U
+                                  &trans         &trans               &trans                         &trans                 &trans         &trans
+#elif defined(TBLE_MIT)
+                      &trans     &kp LS(N0)      &trans                &trans             &trans      &trans   &trans
+#else
+                      &trans     &kp LS(N0)      &trans          &trans       &trans    &trans  &trans         &trans
+#endif
+            >;
+        };
+
+    };
+};
+
