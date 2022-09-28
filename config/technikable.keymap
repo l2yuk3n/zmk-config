@@ -27,6 +27,17 @@
 #define BT(n) BT_SEL n
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    
     chosen {
        zmk,matrix_transform =
 #ifdef TBLE_DUAL_2U
