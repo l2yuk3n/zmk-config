@@ -121,7 +121,7 @@
     &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11        &none          &none          &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
     &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &none          &none          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
 #ifdef TBLE_DUAL_2U
-                                  &kp LCTL         &kp LGUI                &trans                        &trans                 &kp RALT         &kp RSHFT
+                                  &kp LCTRL         &kp LGUI                &trans                        &trans                 &kp RALT         &kp RSHFT
 #elif defined(TBLE_MIT)
                       &trans     &kp LS(N0)      &trans                &trans             &trans      &trans   &trans
 #else
