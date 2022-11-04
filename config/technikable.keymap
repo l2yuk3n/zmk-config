@@ -64,16 +64,16 @@
             label = "default";
             bindings = <
 #ifdef QWERTY_BASE
-    &kp Q          &kp W          &kp E          &kp R          &kp T          &kp ESC        &kp ESC        &kp Y          &kp U          &kp I          &kp O          &lt LWR P         
+    &kp Q          &kp W          &kp E          &kp R          &kp T          &kp C_VOL_DN   &kp C_VOL_UP   &kp Y          &kp U          &kp I          &kp O          &lt LWR P         
     &lt RSE A      &kp S          &kp D          &kp F          &kp G          &none          &none          &kp H          &kp J          &kp K          &kp L          &kp SEMI      
     &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp V          &kp B          &none          &none          &kp N          &kp M          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
 #else
-    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp ESC        &kp ESC        &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp C_VOL_DN   &kp C_VOL_UP   &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
     &lt RSE A      &kp R          &kp S          &kp T          &kp G          &none          &none          &kp M          &kp N          &kp E          &kp I          &kp O
     &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &none          &none          &kp K          &kp H          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
 #endif
 #ifdef TBLE_DUAL_2U
-                                  &kp LCTRL      &hm LGUI QUOT         &lt LWR BSPC                  &lt RSE SPACE          &kp TAB       &kp RCTRL
+                                  &kp LG(L)      &hm LGUI SQT         &lt LWR BSPC                  &lt RSE SPACE          &kp TAB       &kp RCTRL
 #elif defined(TBLE_MIT)
                        &kp LCTRL  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp RALT    &kp RCTRL
 #else
@@ -85,9 +85,9 @@
         lower {
             label = "numbers&symbols";
             bindings = <
-    &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT      &kp ESC        &kp ESC        &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
+    &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT      &kp C_BRI_DN   &kp C_BRI_UP   &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
     &kp N1         &kp N2         &kp N3         &kp N4         &kp N5         &none          &none          &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-    &hm LSHFT BSLH &kp BSLH       &kp GRAVE      &kp SQT        &kp FSLH       &none          &none          &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &trans
+    &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT        &kp COLON      &none          &none          &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &trans
 #ifdef TBLE_DUAL_2U
                                   &kp LCTRL      &trans                &trans                        &lt ADJ RET            &kp RALT       &kp RCTRL
 #elif defined(TBLE_MIT)
@@ -121,7 +121,7 @@
     &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11        &none          &none          &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
     &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &none          &none          &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
 #ifdef TBLE_DUAL_2U
-                                  &trans         &trans                &trans                        &trans                 &trans         &trans
+                                  &kp LCTL         &kp LGUI                &trans                        &trans                 &kp RALT         &kp RSHFT
 #elif defined(TBLE_MIT)
                       &trans     &kp LS(N0)      &trans                &trans             &trans      &trans   &trans
 #else
