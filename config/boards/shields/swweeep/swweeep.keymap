@@ -32,7 +32,7 @@
     &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
     &lt RSE A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I          &kp O
     &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &kp K          &kp H          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
-                                  &kp LG(L)      &hm LGUI SQT   &lt LWR BSPC   &lt RSE SPACE  &kp TAB        &tog SPEC
+                                  &kp LG(L)      &hm LGUI SQT   &lt LWR BSPC   &lt RSE SPACE  &kp TAB        &kp RG(TAB)
             >;
         };
 
