@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "zmk-CiZ",
+			"path": "../zmk-CiZ_v2/zmk-CiZ"
+		}
+	],
+	"settings": {}
+}
