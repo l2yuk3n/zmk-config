@@ -4,7 +4,7 @@
 if SHIELD_SWWEEEP_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "swweeep"
+    default "JHL-swweeep"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
