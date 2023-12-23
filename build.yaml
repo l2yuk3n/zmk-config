@@ -26,9 +26,11 @@ include:
 #  - board: technikable
 #  - board: nice_nano_v2
 #    shield: chocv
-  - board: nice_nano_v2
-    shield: swweeep_left
-  - board: nice_nano_v2
-    shield: swweeep_right
+#  - board: nice_nano_v2
+#    shield: swweeep_left
+#  - board: nice_nano_v2
+#    shield: swweeep_right
+  - board: adafruit_kb2040
+    shield: aaplus_v2
 #  - board: nice_nano_v2
 #    shield: settings_resetx

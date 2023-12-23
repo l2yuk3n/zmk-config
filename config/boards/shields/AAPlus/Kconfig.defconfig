@@ -1,0 +1,6 @@
+if SHIELD_AAPLUSv2
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-AA++"
+
+endif
