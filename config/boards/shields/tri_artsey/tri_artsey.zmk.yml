@@ -1,0 +1,8 @@
+file_format: "1"
+id: tri_artsey
+name: triARTSEY
+type: shield
+url: https://github.com/tarneaux/triboard
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
