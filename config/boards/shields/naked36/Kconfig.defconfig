@@ -1,0 +1,6 @@
+if SHIELD_NAKED36
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-naked36"
+
+endif
