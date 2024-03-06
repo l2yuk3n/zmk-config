@@ -61,7 +61,7 @@
     &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT                &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
     &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
     &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT        &kp COLON                &kp MINUS      &kp EQUAL      &kp COMMA      &kp DOT        &hm RSHFT FSLH
-                                  &kp C_BRI_DN  &kp C_BRI_UP    &trans                   &lt ADJ RET    &trans         &trans
+                                  &kp LCTRL      &kp LGUI       &trans                   &lt ADJ RET    &kp RALT       &RSHFT
                         >;
                 };
 
@@ -83,14 +83,14 @@
                 adjust_layer {
                         label = "ADJFUN";
 // -----------------------------------------------------------------------------------------
-// | BT0 | BT1 | BT2 | BT3 | BLE |    | USB | BT4 |BTPRV|BTNXT|BTCLR|
-// |  <  |  {  |  [  |  (  | F11 |    | F12 |  )  |  ]  |  }  |  >  |
 // | F1  | F2  | F3  | F4  | F5  |    | F6  | F7  | F8  | F9  | F10 |
+// |  <  |  {  |  [  |  (  | F11 |    | F12 |  )  |  ]  |  }  |  >  |
+// | BT0 | BT1 | BT2 | BT3 | BLE |    | USB | BT4 |BTPRV|BTNXT|BTCLR|
 //             | CTRL| GUI |       ||       | ALT |SHIFT|
                         bindings = <
-    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE             &out OUT_USB   &bt BT(4)      &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
-    &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11                  &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
     &kp F1         &kp F2         &kp F3         &kp F4         &kp F5                   &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+    &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11                  &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
+    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE             &out OUT_USB   &bt BT(4)      &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
                                   &kp LCTRL      &kp LGUI       &trans                   &trans         &kp RALT       &kp RSHFT
                         >;
                 };
