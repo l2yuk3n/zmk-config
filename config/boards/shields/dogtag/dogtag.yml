@@ -1,0 +1,8 @@
+file_format: "1"
+id: dogtag
+name: JHL-dogtag
+type: shield
+url: https://github.com/takashicompany/dogtag
+requires: [pro_micro]
+features:
+  - keys
