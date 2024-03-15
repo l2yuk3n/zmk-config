@@ -32,15 +32,7 @@ include:
 #    shield: swweeep_right
 #  - board: adafruit_kb2040
 #    shield: aaplus_v2
-#  - board: seeeduino_xiao_ble
-#    shield: tri_artsey
-#  - board: nice_nano_v2
-#    shield: naked36
-#  - board: nice_nano_v2
-#    shield: lilfoot
-  - board: boardsource_blok
-    shield: dogtag
   - board: seeeduino_xiao_ble
-    shield: pandy
+    shield: tri_artsey
 #  - board: nice_nano_v2
-#    shield: settings_reset
+#    shield: settings_resetx

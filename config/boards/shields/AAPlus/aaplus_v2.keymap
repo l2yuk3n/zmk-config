@@ -38,7 +38,7 @@
 //     |SFT-Z|CTL-X|ALT-C|  D  |  V  |  K  |  H  |ALT-,|CTL-.|
 //                   |GUI-'| LOW-BS||RSE-SP | TAB |
                         bindings = <
-    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y          &hm RSHFT SEMI
+    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y          &hm LWR SEMI
     &lt RSE A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I          &kp O
          &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &kp K          &kp H          &hm RALT COMMA &hm RCTRL DOT
                                                  &hm LGUI SQT   &lt LWR BSPC   &lt RSE SPACE  &kp TAB
