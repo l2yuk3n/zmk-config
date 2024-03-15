@@ -38,7 +38,7 @@
         combo_shiftSlash {
             timeout-ms = <50>;
             key-positions = <27 28>;
-            layers = <0 1>
+            layers = <0 1>;
             bindings = <&hm RCTRL DOT>;
         };
     };
