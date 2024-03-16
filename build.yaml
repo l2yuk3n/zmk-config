@@ -36,7 +36,7 @@ include:
 #    shield: tri_artsey
 #  - board: nice_nano_v2
 #    shield: naked36
-#  - board: nice_nano_v2
+#  - board: adafruit_kb2040
 #    shield: lilfoot
 #  - board: boardsource_blok
 #    shield: dogtag

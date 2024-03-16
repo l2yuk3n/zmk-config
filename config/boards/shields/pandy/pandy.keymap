@@ -31,7 +31,6 @@
     };
 };
 
-/*
 / {
     combos {
         compatible = "zmk,combos";
@@ -43,7 +42,6 @@
         };
     };
 };
-*/
 
 / {
     keymap {
@@ -52,8 +50,8 @@
         ALP {
             bindings = <
     &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y       &hm NUM SEMI 
-    &lt NAV A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I       &kp O
-    &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &kp K          &kp H          &hm RALT COMMA &kp RSHFT FSLH
+    &hm NAV A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I       &kp O
+    &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &kp K          &kp H          &hm RALT COMMA &hm RSHFT FSLH
 	&kp LCTRL      &hm LGUI SQT             &lt NUM BSPC        &none                    &lt NAV SPACE  &kp TAB
             >;
         };
@@ -62,7 +60,7 @@
             bindings = <
     &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT      &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
     &kp N1         &kp N2         &kp N3         &kp N4         &kp N5         &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
-    &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT        &kp COLON      &kp MINUS      &kp EQUAL      &kp COMMA      &kp RSHFT FSLH
+    &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT        &kp COLON      &kp MINUS      &kp EQUAL      &kp COMMA      &hm RSHFT FSLH
 	&kp LCTRL      &kp LALT                 &trans              &none                    &lt FUN RET    &kp RALT
             >;
         };
