@@ -36,8 +36,8 @@ include:
 #    shield: tri_artsey
 #  - board: nice_nano_v2
 #    shield: naked36
-  - board: adafruit_kb2040
-    shield: lilfoot
+#  - board: adafruit_kb2040
+#    shield: lilfoot
   - board: adafruit_kb2040
     shield: claudia
 #  - board: boardsource_blok
