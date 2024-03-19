@@ -37,9 +37,9 @@ include:
 #  - board: nice_nano_v2
 #    shield: naked36
   - board: adafruit_kb2040
-    shield: littlefoot
+    shield: lilfoot
   - board: adafruit_kb2040
-   shield: claudia
+    shield: claudia
 #  - board: boardsource_blok
 #    shield: dogtag
 #  - board: seeeduino_xiao_ble
