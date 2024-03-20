@@ -49,8 +49,8 @@
 
         ALP {
             bindings = <
-    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y       &hm NUM SEMI 
-    &hm NAV A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I       &kp O
+    &kp Q          &kp W          &kp F          &kp P          &kp B          &kp J          &kp L          &kp U          &kp Y       &lt NUM SEMI 
+    &lt NAV A      &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I       &kp O
     &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V          &kp K          &kp H          &hm RALT COMMA &hm RSHFT FSLH
 	&kp LCTRL      &hm LGUI SQT             &lt NUM BSPC        &none                    &lt NAV SPACE  &kp TAB
             >;
@@ -79,7 +79,7 @@
     &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
     &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11        &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
     &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE   &out OUT_USB   &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
-    &kp LCTRL      &kp LGUI                 &trans              &none                    &trans         &kp RALT
+    &kp LCTRL      &sys_reset               &trans              &none                    &trans         &bootloader
             >;
         };
     };
