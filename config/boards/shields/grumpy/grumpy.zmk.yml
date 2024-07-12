@@ -1,0 +1,8 @@
+file_format: "1"
+id: grumpy
+name: JHL-grumpy
+type: shield
+url: https://github.com/weteor/grumpy
+requires: [seeeduino_xiao_ble]
+features:
+  - keys

@@ -1,0 +1,9 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_GRUMPY
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-grumpy"
+
+endif
