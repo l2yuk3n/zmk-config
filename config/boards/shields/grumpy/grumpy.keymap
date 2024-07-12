@@ -58,8 +58,6 @@ combo_##NAME { \
         COMBO(esc, &kp ESC, 0 8)
 /* Number Layer Specials */
         COMBO_LAY(dash, &kp MINUS, 22 23, 1)
-        COMBO_LAY(, &kp V, 12 21, 0)
-        COMBO_LAY(v, &kp V, 12 21, 0)
 /* NAV Layer Specials */
         COMBO_LAY(aster, &kp KP_ASTERISK, 4 13, 2)
         COMBO_LAY(num0, &kp KP_N0, 12 22, 2)
