@@ -54,13 +54,14 @@ combo_##NAME { \
         COMBO_LAY(semi, &my_lt NUM SEMI, 6 7, 0)
         COMBO_LAY(gui, &hm LGUI SQT, 21 26, 0)
         COMBO_LAY(tab, &kp TAB, 8 9, 0)
+        COMBO_LAY(tab2, &kp TAB, 22 27, 0)
 /* ALL layer */
         COMBO(esc, &kp ESC, 0 8)
 /* Number Layer Specials */
         COMBO_LAY(dash, &kp MINUS, 22 23, 1)
 /* NAV Layer Specials */
         COMBO_LAY(aster, &kp KP_ASTERISK, 4 13, 2)
-        COMBO_LAY(num0, &kp KP_N0, 12 22, 2)
+        COMBO_LAY(num0, &kp KP_N0, 22 23, 2)
         COMBO_LAY(numdot, &kp KP_DOT, 23 24, 2)
     };
 };
@@ -116,8 +117,8 @@ combo_##NAME { \
             #binding-cells = <2>;
             // flavor = "tap-preferred";
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
             // global-quick-tap;
             bindings = <&mo &kp>, <&kp>;
             // non-thumb keys
@@ -167,7 +168,7 @@ combo_##NAME { \
             bindings = <
                                &kp W          &kp F          &kp P          &kp B          &kp K          &kp L          &kp U          &kp Y
                 &my_lt NAV A   &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I           &kp O
-                &hm LSHFT Z    &hl LCTRL X    &hl LALT C     &kp D                                        &kp H          &hr RALT DOT   &hr RCTRL COMMA &hm RSHFT FSLH
+                &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D                                        &kp H          &hm RALT DOT   &hm RCTRL COMMA &hm RSHFT FSLH
                                                                         &my_lt NUM BSPC       &my_lt NAV SPACE
             >;
         };
@@ -187,7 +188,7 @@ combo_##NAME { \
             bindings = <
                                &kp PG_UP      &kp UP         &kp HOME       &kp C_MUTE     &kp KP_MINUS   &kp KP_N7      &kp KP_N8      &kp KP_N9
                 &trans         &kp LEFT       &kp DOWN       &kp RIGHT      &kp KP_NUMLOCK &kp KP_SLASH   &kp KP_N4      &kp KP_N5      &kp KP_N6       &kp KP_PLUS
-                &trans         &kp PG_DN      &kp INSERT     &kp END                                      &kp KP_N1      &kp KP_N2      &kp KP_N3       &kp KP_ENTER
+                &hm LSHFT BSLH &kp PG_DN      &kp INSERT     &kp END                                      &kp KP_N1      &kp KP_N2      &kp KP_N3       &kp KP_ENTER
                                                                         &my_lt FUN DEL        &trans
             >;
         };
