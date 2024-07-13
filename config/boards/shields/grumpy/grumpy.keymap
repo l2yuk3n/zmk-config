@@ -168,7 +168,7 @@ combo_##NAME { \
                                &kp W          &kp F          &kp P          &kp B          &kp K          &kp L          &kp U          &kp Y
                 &my_lt NAV A   &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I           &kp O
                 &hm LSHFT Z    &hl LCTRL X    &hl LALT C     &kp D                                        &kp H          &hr RALT DOT   &hr RCTRL COMMA &hm RSHFT FSLH
-                                                                        &my_lt NUM BSPACE     &my_lt NAV SPACE
+                                                                        &my_lt NUM BSPC       &my_lt NAV SPACE
             >;
         };
         numbers {
