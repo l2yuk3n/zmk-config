@@ -168,7 +168,7 @@ combo_##NAME { \
             bindings = <
                                &kp W          &kp F          &kp P          &kp B          &kp K          &kp L          &kp U          &kp Y
                 &my_lt NAV A   &kp R          &kp S          &kp T          &kp G          &kp M          &kp N          &kp E          &kp I           &kp O
-                &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D                                        &kp H          &hm RALT DOT   &hm RCTRL COMMA &hm RSHFT FSLH
+                &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D                                        &kp H          &hm RALT COMMA &hm RCTRL DOT   &hm RSHFT FSLH
                                                                         &my_lt NUM BSPC       &my_lt NAV SPACE
             >;
         };
@@ -178,7 +178,7 @@ combo_##NAME { \
             bindings = <
                                &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
                 &kp N1         &kp N2         &kp N3         &kp N4         &kp N5         &kp N6         &kp N7         &kp N8         &kp N9          &kp N0
-                &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT                                      &kp EQUAL      &kp DOT        &kp COMMA       &hm RSHFT FSLH
+                &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT                                      &kp EQUAL      &kp COMMA      &kp DOT         &hm RSHFT FSLH
                                                                         &trans                &my_lt FUN ENTER
             >;
         };
@@ -196,7 +196,7 @@ combo_##NAME { \
             label = "FUN";
 
             bindings = <
-                               &bootloader    &trans         &trans         &kp F11        &kp F12        &trans         &dotcol        &comsem
+                               &reset         &none          &none          &kp F11        &kp F12        &none          &none          &bootloader
                 &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &kp F6         &kp F7         &kp F8         &kp F9          &kp F10
                 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &out OUT_BLE                                 &out OUT_USB   &bt BT_PRV     &bt BT_NXT      &bt BT_CLR
                                                                         &trans                &trans
