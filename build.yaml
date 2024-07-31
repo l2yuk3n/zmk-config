@@ -44,7 +44,9 @@ include:
 #    shield: dogtag
 #  - board: seeeduino_xiao_ble
 #    shield: pandy
+#  - board: seeeduino_xiao_ble
+#    shield: grumpy
   - board: seeeduino_xiao_ble
-    shield: grumpy
+    shield: settings_reset
 #  - board: nice_nano_v2
 #    shield: settings_reset
