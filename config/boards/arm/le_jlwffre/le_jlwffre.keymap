@@ -146,7 +146,7 @@
         //│          │  LEFT    │  DOWN    │   RIGH   │          │           │  KP_*    │   KP_4   │   KP_5   │   KP_6   │  KP_+    │
             &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &kp KP_NUM        &kp KP_ASTERISK &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤           ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │ PG DOWN  │          │  END     │          │           │  KP_/    │   KP_1   │   KP_2   │   KP_3   │  KP_ENT  │
+        //│          │ PG DOWN  │          │  END     │          │           │  KP_DIV  │   KP_1   │   KP_2   │   KP_3   │  KP_ENT  │
             &kp LSHFT  &kp PG_DN  &none      &kp END    &kp INS            &kp KP_DIVIDE  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤           ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &kp KP_DOT  &lt FUN DEL &kp C_MUTE   &trans    &kp KP_N0
