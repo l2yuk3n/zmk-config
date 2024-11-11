@@ -1,0 +1,102 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+#define SPEC 4
+
+#define BT(n) BT_SEL n
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+
+/ {
+  behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+  };
+
+  chosen {
+    zmk,matrix_transform = &default_transform;
+  };
+};
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        label = "COLEDH";
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  |LOW-;|
+// |RSE-A|  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
+// |SFT-Z|CTL-X|ALT-C|  D  |  V  |    |  K  |  H  |ALT-,|CTL-.|SFT-/|
+//             | LOCK|GUI-'| LOW-BS||RSE-SP | TAB |G-TAB|
+                        bindings = <
+    &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &lt RSE A      &kp R          &kp S          &kp T          &kp G                    &kp M          &kp N          &kp E          &kp I          &kp O
+    &hm LSHFT Z    &hm LCTRL X    &hm LALT C     &kp D          &kp V                    &kp K          &kp H          &hm RALT COMMA &hm RCTRL DOT  &hm RSHFT FSLH
+                                  &kp LG(L)      &hm LGUI SQT   &lt LWR BSPC             &lt RSE SPACE  &kp TAB        &kp RG(TAB)
+                        >;
+                };
+
+                lower_layer {
+                        label = "NUMSYM";
+// -----------------------------------------------------------------------------------------
+// |  !  |  @  |  #  |  $  |  %  |    |  ^  |  &  |  *  |  (  |  )  |
+// |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
+// |SFT-\| ; : | ` ~ | ' " |  :  |    | - _ | = + |  ,  |  .  |SFT-/|
+//             |BRI_-|BRI_+|       ||ADJ-ENT|     |     |
+                        bindings = <
+    &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &kp EXCL       &kp AT         &kp HASH       &kp DLLR       &kp PRCNT                &kp CARET      &kp AMPS       &kp STAR       &kp LPAR       &kp RPAR
+    &kp N1         &kp N2         &kp N3         &kp N4         &kp N5                   &kp N6         &kp N7         &kp N8         &kp N9         &kp N0
+    &hm LSHFT BSLH &kp SEMI       &kp GRAVE      &kp SQT        &kp COLON                &kp MINUS      &kp EQUAL      &kp COMMA      &kp DOT        &hm RSHFT FSLH
+                                  &kp LCTRL      &kp LGUI       &trans                   &lt ADJ RET    &kp RALT       &kp RSHFT
+                        >;
+                };
+
+                raise_layer {
+                        label = "NAVPAD";
+// -----------------------------------------------------------------------------------------
+// | ESC | PGUP|  UP | HOME| MUTE|    | KP- | KP7 | KP8 | KP9 | BKSP|
+// |     | LEFT| DOWN|RIGHT|NUMLK|    | KP* | KP4 | KP5 | KP6 | KP_+|
+// |SHIFT| PGDN|     | END |     |    | KP/ | KP1 | KP2 | KP3 |KPENT|
+//             |VOL_-|VOL_+|ADJ-DEL||       | KP0 |KPDOT|
+                        bindings = <
+    &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+   &kp ESC         &kp PGUP       &kp UP         &kp HOME       &kp C_MUTE              &kp KP_MINUS    &kp KP_N7      &kp KP_N8      &kp KP_N9       &kp BSPC
+   &trans          &kp LEFT       &kp DOWN       &kp RIGHT      &kp KP_NUM              &kp KP_ASTERISK &kp KP_N4      &kp KP_N5      &kp KP_N6       &kp KP_PLUS
+   &kp LSHFT       &kp PGDN       &none          &kp END        &kp INS                 &kp KP_DIVIDE   &kp KP_N1      &kp KP_N2      &kp KP_N3       &kp KP_ENTER
+                    	          &kp C_VOL_DN   &kp C_VOL_UP   &lt ADJ DEL             &trans          &kp KP_N0      &kp KP_DOT
+                        >;
+                };
+
+                adjust_layer {
+                        label = "ADJFUN";
+// -----------------------------------------------------------------------------------------
+// | F1  | F2  | F3  | F4  | F5  |    | F6  | F7  | F8  | F9  | F10 |
+// |  <  |  {  |  [  |  (  | F11 |    | F12 |  )  |  ]  |  }  |  >  |
+// | BT0 | BT1 | BT2 | BT3 | BLE |    | USB | BT4 |BTPRV|BTNXT|BTCLR|
+//             | CTRL| GUI |       ||       | ALT |SHIFT|
+                        bindings = <
+    &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &lt LWR SEMI
+    &kp F1         &kp F2         &kp F3         &kp F4         &kp F5                   &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
+    &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11                  &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
+    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE             &out OUT_USB   &bt BT(4)      &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
+                                  &kp LCTRL      &kp LGUI       &trans                   &trans         &kp RALT       &kp RSHFT
+                        >;
+                };
+        };
+};

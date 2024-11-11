@@ -1,0 +1,15 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if BOARD_LE_JLWFFRE
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-jlwffre"
+
+config BT_CTLR
+    default BT
+
+config ZMK_SLEEP
+    default y
+
+endif # BOARD_LE_JLWFFRE

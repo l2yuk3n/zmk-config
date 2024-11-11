@@ -1,0 +1,8 @@
+file_format: "1"
+id: aaplus
+name: JHL-AA++
+type: shield
+url: https://github.com/subottimale/alphalpha_plus/tree/main/v2%20Files
+requires: [pro_micro]
+features:
+  - keys

@@ -1,0 +1,13 @@
+file_format: "1"
+id: le_jlwffre
+name: le jlwffre
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+outputs:
+  - usb
+  - ble
+url: https://jlw-kb.com
+revision: "0"
