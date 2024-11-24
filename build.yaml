@@ -47,6 +47,8 @@ include:
 #  - board: seeeduino_xiao_ble
 #    shield: grumpy
   - board: le_jlwffre
+  - board: le_jlwffre
+    shield: settings_reset
 #  - board: seeeduino_xiao_ble
 #    shield: settings_reset
 #  - board: nice_nano_v2
