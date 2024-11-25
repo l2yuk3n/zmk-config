@@ -129,7 +129,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮                ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ` ~     │   BACK   │   FWD    │   BTN1   │   BTN2   │                │  \ |     │  - _     │  = +     │  [       │  ]       │
-            &kp GRAVE  &mkp MB5   &mkp MB4   &mkp LCLK  &mkp RCLK                   &as BSLH   &as MINUS  &as EQUAL  &as LBKT   &as RBKT
+            &kp GRAVE  &mkp MB4   &mkp MB5   &mkp LCLK  &mkp RCLK                   &as BSLH   &as MINUS  &as EQUAL  &as LBKT   &as RBKT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤                ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1 !     │  2 @     │  3 #     │  4 $     │  5 %     │                │  6 ^     │  7 &     │  8 *     │  9 (     │  0 )     │
             &as N1     &as N2     &as N3     &as N4     &as N5                      &as N6     &as N7     &as N8     &as N9     &as N0
