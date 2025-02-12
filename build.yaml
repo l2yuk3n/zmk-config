@@ -34,8 +34,8 @@ include:
 #    shield: aaplus_v2
 #  - board: seeeduino_xiao_ble
 #    shield: tri_artsey
-#  - board: nice_nano_v2
-#    shield: naked36
+  - board: nice_nano_v2
+    shield: naked36
 #  - board: adafruit_kb2040
 #    shield: lilfoot
 #  - board: adafruit_kb2040
@@ -46,7 +46,7 @@ include:
 #    shield: pandy
 #  - board: seeeduino_xiao_ble
 #    shield: grumpy
-  - board: le_jlwffre
+#  - board: le_jlwffre
 #  - board: le_jlwffre
 #    shield: settings_reset
 #  - board: seeeduino_xiao_ble
