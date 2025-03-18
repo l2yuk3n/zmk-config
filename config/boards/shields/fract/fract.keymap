@@ -33,7 +33,7 @@
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        }
+        };
         as_ht: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
