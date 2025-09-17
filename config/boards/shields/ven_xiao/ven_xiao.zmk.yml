@@ -1,0 +1,8 @@
+file_format: "1"
+id: ven_xiao
+name: venXiao
+type: shield
+url: https://github.com/
+requires: [seeeduino_xiao_ble]
+features:
+  - keys

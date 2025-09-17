@@ -48,8 +48,10 @@ include:
 #    shield: grumpy
 #  - board: le_jlwffre
 #  - board: le_jlwffre
-  - board: nice_nano_v2
-    shield: fract
+#  - board: nice_nano_v2
+#    shield: fract
+  - board: seeeduino_xiao_ble
+    shield: ven_xiao
 #    shield: settings_reset
 #  - board: seeeduino_xiao_ble
 #    shield: settings_reset
