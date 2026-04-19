@@ -5,7 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "rollow.dtsi"
+// #include "rollow.dtsi"       // Not needed because just mock kscan here
 
 / {
     physical_layout0: physical_layout_0 {

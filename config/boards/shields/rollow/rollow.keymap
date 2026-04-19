@@ -211,7 +211,7 @@
  */
             bindings = <
     &none     &bootloader    &none          &none          &none          &none          &none          &none          &none          &none          &bootloader    &none
-    &none     &reset         &none          &none          &none          &none          &none          &none          &none          &none          &reset         &none
+    &none     &sys_reset     &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset     &none
     &none     &none          &none          &none          &none          &none          &none          &none          &none          &none          &none          &none
                                             &trans         &trans         &trans         &trans         &trans         &tog SPEC
                         >;
