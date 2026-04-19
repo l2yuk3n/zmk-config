@@ -1,21 +1,48 @@
-if SHIELD_ROLLOW_LEFT
+if SHIELD_ROLLOW_DONGLE
 
 config ZMK_KEYBOARD_NAME
 	default "JHL-ROLLOW"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+config ZMK_USB
+	default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+	default 2
+
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+config BT_MAX_CONN
+	default 7
+
+# Set this to the same number as BT_MAX_CONN
+config BT_MAX_PAIRED
+    default 7
+
+endif
+
+
+if SHIELD_ROLLOW_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-ROLLOW_L"
+
+config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 endif
 
+
 if SHIELD_ROLLOW_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "JHL-ROLLOW_R"
-	
+    default "JHL-ROLLOW_R"
+
 endif
 
-if SHIELD_ROLLOW_LEFT || SHIELD_ROLLOW_RIGHT
+
+if SHIELD_ROLLOW_LEFT || SHIELD_ROLLOW_RIGHT || SHIELD_ROLLOW_DONGLE
 
 config ZMK_SPLIT
 	default y

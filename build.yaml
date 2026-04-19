@@ -19,10 +19,14 @@ include:
 #    shield: microdox_right
 #  - board: nice_nano_v2
 #    shield: qaz
-#  - board: nice_nano_v2
-#    shield: rollow_left
-#  - board: nice_nano_v2
-#    shield: rollow_right
+  - board: mdbt50q_rx
+    shield: rollow_dongle
+  - board: nice_nano_v2
+    shield: rollow_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  - board: nice_nano_v2
+    shield: rollow_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 #  - board: technikable
 #  - board: nice_nano_v2
 #    shield: chocv
@@ -50,10 +54,12 @@ include:
 #  - board: le_jlwffre
 #  - board: nice_nano_v2
 #    shield: fract
-  - board: seeeduino_xiao_ble
-    shield: ven_xiao
+#  - board: seeeduino_xiao_ble
+#    shield: ven_xiao
 #    shield: settings_reset
 #  - board: seeeduino_xiao_ble
 #    shield: settings_reset
-#  - board: nice_nano_v2
-#    shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
+  - board: mdbt50q_rx
+    shield: settings_reset

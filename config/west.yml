@@ -4,10 +4,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmk-ardux
       url-base: https://github.com/arduxio
+    - name: rschenk
+      url-base: https://github.com/rschenk
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
+    - name: zmk-component-raytac-dongle
+      remote: rschenk
+      revision: v0.3 # <-- This module pinned to the same version as ZMK
   self:
     path: config
