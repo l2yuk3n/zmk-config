@@ -6,6 +6,10 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+# Should not need this???
+config ZMK_USB
+    default y
+
 config ZMK_SPLIT
     default y
 
