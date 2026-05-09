@@ -1,3 +1,26 @@
+if SHIELD_CHOCV_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "JHL-ChocV-D"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+config BT_MAX_CONN
+    default 5
+
+config BT_MAX_PAIRED
+    default 5
+
+endif
+
+
 if SHIELD_CHOCV
 
 config ZMK_KEYBOARD_NAME

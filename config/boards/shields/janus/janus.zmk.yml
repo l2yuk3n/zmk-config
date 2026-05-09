@@ -1,11 +1,11 @@
 file_format: "1"
-id: swweeep
-name: swweeep
+id: janus
+name: JHL-Janus
 type: shield
-url: https://github.com/sadekbaroudi/sweep36
-requires: [pro_micro]
+url: https://github.com/skarrmann/janus/
+requires: [seeeduino_xiao_ble]
 features:
   - keys
 siblings:
-  - swweeep_left
-  - swweeep_right
+  - janus_left
+  - janus_right

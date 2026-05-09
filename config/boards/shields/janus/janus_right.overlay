@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "swweeep.dtsi"
+#include "janus.dtsi"
 
 &default_transform {
   col-offset = <18>;
