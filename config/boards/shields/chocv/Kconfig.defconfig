@@ -3,8 +3,8 @@ if SHIELD_CHOCV_DONGLE
 config ZMK_KEYBOARD_NAME
     default "JHL-ChocV-D"
 
-# Changed to BLE role central
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+# Role central
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 # Should not need this???
