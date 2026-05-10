@@ -3,7 +3,8 @@ if SHIELD_CHOCV_DONGLE
 config ZMK_KEYBOARD_NAME
     default "JHL-ChocV-D"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+# Changed to BLE role central
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
 # Should not need this???
@@ -29,5 +30,9 @@ if SHIELD_CHOCV
 
 config ZMK_KEYBOARD_NAME
     default "JHL-ChocV"
+
+# Do we need this?
+config ZMK_BLE
+    default y
 
 endif
