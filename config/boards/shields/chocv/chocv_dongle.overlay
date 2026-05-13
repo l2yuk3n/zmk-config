@@ -7,17 +7,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-    };
-};
-
-/ {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;
+//        zmk,physical-layout = &physical_layout0;
     };
 
     mock_kscan: mock_kscan_0 {
