@@ -39,15 +39,15 @@
         mkp_encoder: mkp_encoder {
             compatible = "zmk,behavior-sensor-rotate";
                 #sensor-binding-cells = <0>;
-            bindings = <&mkp MB4>, <&mkp MB5>;
-            tap-ms = <20>;
+            bindings = <&mkp MB5>, <&mkp MB4>;
+            tap-ms = <200>;
         };
 
         msc_encoder: msc_encoder {
             compatible = "zmk,behavior-sensor-rotate-var";
            	#sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;
+            tap-ms = <200>;
         };
     };
 
@@ -109,7 +109,7 @@
                         >;
                         sensor-bindings = 
                                 <&inc_dec_kp LC(TAB) LC(LS(TAB))>,      //Left Encoder: tabs
-                                <&msc_encoder SCRL_UP SCRL_DOWN>;       //Right Encoder: scroll
+                                <&msc_encoder SCRL_DOWN SCRL_UP>;       //Right Encoder: scroll
                 };
 
         lower {
@@ -190,7 +190,7 @@
                         >;
                         sensor-bindings = 
                                 <&inc_dec_kp C_BRI_UP C_BRI_DN>,        //Left Encoder:
-                                <&inc_dec_kp PG_UP PG_DN>;              //Right Encoder:
+                                <&inc_dec_kp PG_DN PG_UP>;              //Right Encoder:
                 };
 
         special {
