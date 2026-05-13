@@ -24,11 +24,11 @@ include:
     shield: rollow_right
 #    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 #  - board: technikable
-  - board: raytac_mdbt50q_rx
-    shield: chocv_dongle
-  - board: nice_nano_v2
-    shield: chocv
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+#  - board: raytac_mdbt50q_rx
+#    shield: chocv_dongle
+#  - board: nice_nano_v2
+#    shield: chocv
+#    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 #  - board: nice_nano_v2
 #    shield: swweeep_left
 #  - board: nice_nano_v2
@@ -61,7 +61,7 @@ include:
 #    shield: settings_reset
 #  - board: seeeduino_xiao_ble
 #    shield: settings_reset
-  - board: nice_nano_v2
-    shield: settings_reset
-  - board: raytac_mdbt50q_rx
-    shield: settings_reset
+#  - board: nice_nano_v2
+#    shield: settings_reset
+#  - board: raytac_mdbt50q_rx
+#    shield: settings_reset
