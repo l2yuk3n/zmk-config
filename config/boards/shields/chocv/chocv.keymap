@@ -15,30 +15,23 @@
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
-
 / {
-  behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        behaviors {
+                hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "homerow mods";
+                #binding-cells = <2>;
+                tapping-term-ms = <175>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+                };
         };
-  };
 
-  chosen {
-    zmk,matrix_transform = &default_transform;
-  };
-};
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "COLEDH";
+                        display-name = "COLEDH";
 // -----------------------------------------------------------------------------------------
 // |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L  |  U  |  Y  |LOW-;|
 // |RSE-A|  R  |  S  |  T  |  G  |    |  M  |  N  |  E  |  I  |  O  |
@@ -53,7 +46,7 @@
                 };
 
                 lower_layer {
-                        label = "NUMSYM";
+                        display-name = "NUMSYM";
 // -----------------------------------------------------------------------------------------
 // | ` ~ |BACK |LCLK |MCLK |RCLK |    | FWD |PREV |PLAY |NEXT |SNIP |
 // |  1  |  2  |  3  |  4  |  5  |    |  6  |  7  |  8  |  9  |  0  |
@@ -68,7 +61,7 @@
                 };
 
                 raise_layer {
-                        label = "NAVPAD";
+                        display-name = "NAVPAD";
 // -----------------------------------------------------------------------------------------
 // | ESC | PGUP|  UP | HOME| MUTE|    | KP- | KP7 | KP8 | KP9 | BKSP|
 // |     | LEFT| DOWN|RIGHT|NUMLK|    | KP* | KP4 | KP5 | KP6 | KP_+|
@@ -83,14 +76,14 @@
                 };
 
                 adjust_layer {
-                        label = "ADJFUN";
+                        display-name = "ADJFUN";
 // -----------------------------------------------------------------------------------------
 // | BT0 | BT1 | BT2 | BT3 | BLE |    | USB | BT4 |BTPRV|BTNXT|BTCLR|
 // |  <  |  {  |  [  |  (  | F11 |    | F12 |  )  |  ]  |  }  |  >  |
 // | F1  | F2  | F3  | F4  | F5  |    | F6  | F7  | F8  | F9  | F10 |
 //             | CTRL| GUI |       ||       | ALT |SHIFT|
                         bindings = <
-    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE             &out OUT_USB   &bt BT(4)      &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
+    &bt BT(0)      &bt BT(1)      &bt BT(2)      &bt BT(3)      &out OUT_BLE             &out OUT_USB   &none          &bt BT_PRV     &bt BT_NXT     &bt BT_CLR
     &kp LT         &kp LBRC       &kp LBKT       &kp LPAR       &kp F11                  &kp F12        &kp RPAR       &kp RBKT       &kp RBRC       &kp GT
     &kp F1         &kp F2         &kp F3         &kp F4         &kp F5                   &kp F6         &kp F7         &kp F8         &kp F9         &kp F10
                                   &kp LCTRL      &kp LGUI       &trans                   &trans         &kp RALT       &kp RSHFT

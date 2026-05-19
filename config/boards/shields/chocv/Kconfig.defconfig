@@ -8,8 +8,8 @@ config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 # Should not need this???
-config ZMK_USB
-    default y
+# config ZMK_USB
+#     default y
 
 config ZMK_SPLIT
     default y
@@ -32,7 +32,7 @@ config ZMK_KEYBOARD_NAME
     default "JHL-ChocV"
 
 # Do we need this?
-config ZMK_BLE
-    default y
+# config ZMK_BLE
+#    default y
 
 endif

@@ -6,3 +6,6 @@ url: https://github.com/brickbots/chocV
 requires: [pro_micro]
 features:
   - keys
+siblings:
+  - chocv_dongle
+  - chocv
